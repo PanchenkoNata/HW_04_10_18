@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:300,400,700&subset=cyrillic');
+
+* {
+	box-sizing: border-box;
+}
+
+.all_cards {
+    width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.card {
+	font-family: "Open Sans", san-serif;
+    color: #fefefe;
+	background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+/*background darkening in card */
+.card::before {
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: " ";
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    z-index: 4;
+}
+.size1 {
+    width: 50%;
+    height: 516px;
+}
+.size2 {
+    width: 50%;
+    height: 258px;
+}
+.content {
+    position: relative;
+    z-index: 8;
+}
+.size1 .content {
+    height: 417px;
+    margin: 60px 68px 38px 67px;
+}
+.size2 .content {
+    height: 200px;
+    margin: 33px 68px 24px 67px;
+}
+.child_card {
+    background-image: url("..//images/child_card.jpg");
+}
+.child_card .card_name, .child_card.card::before {
+    background-color: #058cff;
+}
+.basic_sport {
+    background-image: url("..//images/ball1.jpg");
+}
+.basic_sport .card_name,  .basic_sport.card::before {
+    background-color: #db28b3;
+}
+.full_immertion {
+    background-image: url("..//images/full_immertion.jpg");
+}
+.full_immertion .card_name,  .full_immertion.card::before {
+    background-color: #02828f;
+}
+.aqua_yoga {
+    background-image: url("..//images/yoga3_cut.png");
+    color: #5e6a75;
+}
+.aqua_yoga .card_name,  .aqua_yoga.card::before {
+    background-color: #ffffff;
+}
+
+/*info*/
+.info {
+	width: 360px;
+
+}
+.card_name {
+	font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.8;
+    letter-spacing: -1.8px;
+    word-spacing: 9px;
+    width: 178px;
+    height: 31px;
+    padding-left: 12px;    
+    border-radius: 4px;
+}
+.card_name span {
+	letter-spacing: 0;
+}
+h2 {
+	font-family: "Open Sans", san-serif;
+	font-weight: 400;
+	font-size: 54px;
+	letter-spacing: -3.2px;
+	line-height: 1.2;
+	margin: 20px 0 21px -3px;
+    padding-right: 126px;
+}
+h2 span {
+	text-transform: uppercase;
+}
+.size2 h2 {
+    font-size: 42px;
+    margin: 14px 0 0 -3px;
+    padding-right: 0;
+}
+.card_description {
+	font-size: 19px;
+    font-weight: 300;
+    letter-spacing: -2.1px;
+    line-height: 1.25;
+    padding-right: 126px;
+}
+.size2 .card_description {
+    margin-top: 10px;
+    padding-right: 66px;
+}
+
+/*button BUY*/
+.card_buy {
+    width: 119px;
+    height: 52px;
+    position: absolute;
+    top: 0px;
+    right: 21px;
+    /*for gradient border around the button*/
+    background: linear-gradient(#489fdb, #5f84be);
+    padding: 1px;
+    border-radius: 7px;
+}
+.card_buy button {
+	width: 100%;
+    height: 100%;
+	background: linear-gradient(#3bb1e0, #3a85bd);
+	border: none;
+	border-radius: 6px;
+	position: relative;
+	z-index: 23;
+}
+.card_buy::after {
+	width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #489fdb, #5f84be);
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: block;
+    content: " ";
+    position: absolute;
+    transform: rotate(45deg);
+    top: 6px;
+    right: -15px;
+    z-index: 15;
+}
+.card_buy button::after {
+	width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #3bb1e0, #3a85bd);
+    border-radius: 5px;
+    display: block;
+    content: " ";
+    position: absolute;
+    transform: rotate(45deg);
+    top: 6px;
+    right: -15px;
+    z-index: 20;
+}
+.card_buy button span {
+	padding-left: 15px;
+	font-family: "Open Sans", san-serif;
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #ffffff;
+	position: relative;
+	z-index: 25;
+}
+
+/*price*/
+.card_price {
+	width: 108px;
+    height: 32px;
+    background: #f5c600;
+    text-align: center;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 5;
+}
+.card_price span {
+	font-weight: 700;
+	font-size: 26px;
+	letter-spacing: 1.8px;
+	color: #545628;
+	padding-top: 10px;
+}
